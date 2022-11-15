@@ -13,7 +13,7 @@ Create a new 3D project in Unity 2020.3.40+
 Import Oculus Integration and create an App ID for your app on the Oculus developer dashboard with the adequate
 permissions for avatar use (guide [here](https://developer.oculus.com/documentation/unity/meta-avatars-app-config/))
 
-Put the App IDs into the required fields (from the menus -> Oculus/
+Put the App IDs into the required fields (from the menus -> Oculus/Platform/Edit settings)
 
 Install Photon PUN 2 - Free, create an App in the website and enter the app id when asked
 
@@ -28,6 +28,10 @@ Add the Script LogInManager (found in Assets/MyScripts/LogInManager.cs) to the S
 - spawn point: any gameObject from the scene, it will be the spawn point of the users entering the room.
 - Text: a text object where some debug info will be displayed.
 
+Your scene should look something like this
+
+![](ReadmeAssets/unitySceneImage.png)
+
 ### 2. Player prefab
 
 Create a prefab stored under the Assets/Resources folder named NetworkPlayer.
@@ -39,7 +43,15 @@ Add the component Photon View
 Add the component Photon Transform View
 Add the component Sample Avatar locomotion
 
+The object should look like this
+
+![](ReadmeAssets/NetworkPlayerObjectImage.png)
+
 As a child of this first object put an OVRCameraRig object, which will be the view of the headset of the user.
+
+The prefab should then look like this
+
+![](ReadmeAssets/networkPlayerImage.png)
 
 ### 3. Scripts
 
